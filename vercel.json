@@ -16,9 +16,8 @@
     { "src": "/api/(.*)", "dest": "backend/main.py" }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/frontend/dist/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "buildCommand": "cd frontend && yarn build",
-  "outputDirectory": "frontend/dist",
   "framework": "vite"
 }
