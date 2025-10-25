@@ -15,7 +15,6 @@ import PreviewPane from "./components/preview/PreviewPane";
 import { GenerationSettings } from "./components/settings/GenerationSettings";
 import StartPane from "./components/start-pane/StartPane";
 import GenerateFromText from "./components/generate-from-text/GenerateFromText";
-import GithubSync from "./components/github/GithubSync";
 import { useCodeGeneration } from "./hooks/useCodeGeneration";
 
 function App() {
@@ -107,12 +106,6 @@ function App() {
 
           {/* Generation settings like stack and model */}
           <GenerationSettings settings={settings} setSettings={setSettings} />
-
-          <GithubSync
-            repoName="adrimaximus/screenshot-to-code-copy"
-            branchName="main"
-            error="Request timed out"
-          />
 
           {IS_RUNNING_ON_CLOUD && !settings.openAiApiKey && <OnboardingNote />}
 
