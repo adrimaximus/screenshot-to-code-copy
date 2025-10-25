@@ -11,8 +11,8 @@ export default ({ mode }) => {
     base: "",
     plugins: [
       react(),
-      checker({ 
-        typescript: true
+      checker({
+        typescript: true,
       }),
       createHtmlPlugin({
         inject: {
@@ -28,6 +28,9 @@ export default ({ mode }) => {
       alias: {
         "@": path.resolve(__dirname, "./src"),
       },
+    },
+    build: {
+      outDir: "../public",
     },
   });
 };
