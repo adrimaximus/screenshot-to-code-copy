@@ -12,12 +12,11 @@
       "use": "@vercel/python"
     }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "backend/main.py" }
-  ],
   "rewrites": [
+    { "source": "/api/(.*)", "dest": "backend/main.py" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "buildCommand": "cd frontend && yarn build",
+  "outputDirectory": "frontend/dist",
   "framework": "vite"
 }
