@@ -5,7 +5,9 @@
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "frontend/dist" }
+      "config": {
+        "distDir": "frontend/dist"
+      }
     },
     {
       "src": "backend/main.py",
@@ -13,10 +15,13 @@
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "backend/main.py" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "buildCommand": "cd frontend && yarn build",
-  "outputDirectory": "frontend/dist",
-  "framework": "vite"
+    {
+      "source": "/api/(.*)",
+      "destination": "backend/main.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
