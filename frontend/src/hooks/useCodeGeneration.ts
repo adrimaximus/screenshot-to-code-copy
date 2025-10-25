@@ -273,7 +273,7 @@ export function useCodeGeneration(settings: Settings) {
     wsRef.current?.close?.(USER_CLOSE_WEB_SOCKET_CODE);
   };
 
-  function importFromCode(code: string, stack: Stack) {
+  function importFromCode(code: string, _stack: Stack) {
     // Reset any existing state
     reset();
 
