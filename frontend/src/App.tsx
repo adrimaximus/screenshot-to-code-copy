@@ -23,6 +23,7 @@ import StartPane from "./components/start-pane/StartPane";
 import { Commit } from "./components/commits/types";
 import { createCommit } from "./components/commits/utils";
 import GenerateFromText from "./components/generate-from-text/GenerateFromText";
+import GithubSync from "./components/github/GithubSync";
 
 function App() {
   const {
@@ -383,6 +384,12 @@ function App() {
 
           {/* Generation settings like stack and model */}
           <GenerationSettings settings={settings} setSettings={setSettings} />
+
+          <GithubSync
+            repoName="adrimaximus/screenshot-to-code-copy"
+            branchName="main"
+            error="Request timed out"
+          />
 
           {/* Show tip link until coding is complete */}
           {/* {appState !== AppState.CODE_READY && <TipLink />} */}
